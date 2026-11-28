@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a35">
+<title>Maya & Hasan | Meta Ads Agency</title>
+<meta name="description" content="Professional Facebook and Instagram advertising services for businesses worldwide. Based in Malaysia with transparent MYR pricing.">
+<style>
+:root{--navy:#101a35;--navy2:#18284d;--blue:#4778f5;--blue2:#315fe0;--mint:#43d6ad;--ink:#1b2742;--muted:#68738b;--paper:#f5f7fc;--line:#e5eaf3;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+a{text-decoration:none;color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+button,a{-webkit-tap-highlight-color:transparent}
+.container{width:min(1140px,calc(100% - 40px));margin:auto}
+header.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,234,243,.85)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:21px;font-weight:850;letter-spacing:-.7px;color:var(--navy)}
+.brand span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:650;color:#536078}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:750;transition:.2s ease}
+.nav-cta{background:var(--navy);color:white;padding:11px 19px;font-size:13px}
+.nav-cta:hover,.btn-dark:hover{background:var(--blue2);transform:translateY(-2px)}
+.menu-toggle{display:none;border:0;background:transparent;font-size:25px;color:var(--navy);cursor:pointer}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(83,126,255,.35),transparent 28%),linear-gradient(130deg,#101a35 0%,#182d59 58%,#244c91 100%);color:#fff;padding:100px 0 92px}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-140px;bottom:-250px;box-shadow:0 0 0 55px rgba(255,255,255,.035),0 0 0 110px rgba(255,255,255,.025)}
+.hero-content{position:relative;z-index:1;max-width:780px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#b8caff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:8px 13px;border-radius:99px;font-size:12px;font-weight:750;letter-spacing:1.2px;text-transform:uppercase}
+.dot{width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 0 5px rgba(67,214,173,.13)}
+.hero h1{font-size:clamp(39px,6vw,66px);line-height:1.08;letter-spacing:-2.5px;margin:25px 0 22px;max-width:800px}
+.hero h1 em{font-style:normal;color:#91b1ff}
+.hero p{font-size:17px;color:#d4def2;max-width:640px;margin-bottom:32px}
+.actions{display:flex;flex-wrap:wrap;gap:13px}
+.btn{padding:14px 23px;font-size:14px}
+.btn-green{background:#28c981;color:#092d23;box-shadow:0 9px 24px rgba(40,201,129,.2)}
+.btn-green:hover{background:#49e09c;transform:translateY(-2px)}
+.btn-light{border:1px solid rgba(255,255,255,.45);color:#fff}
+.btn-light:hover{background:#fff;color:var(--navy)}
+.trust-row{display:flex;flex-wrap:wrap;gap:25px;margin-top:46px;color:#c5d2eb;font-size:12px;font-weight:650}
+.trust-row span{display:flex;align-items:center;gap:8px}
+.trust-row b{color:var(--mint);font-size:16px}
+section{padding:86px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.kicker{color:var(--blue);font-size:12px;font-weight:850;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:clamp(29px,4vw,40px);line-height:1.2;letter-spacing:-1.1px;color:var(--navy);margin:10px 0 13px}
+.section-head p{color:var(--muted);font-size:15px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{padding:30px 27px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 30px rgba(24,40,77,.04);transition:.22s}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(24,40,77,.09);border-color:#cbd8ff}
+.icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#edf2ff;font-size:24px;margin-bottom:21px}
+.service-card h3{font-size:19px;color:var(--navy);margin-bottom:9px}
+.service-card p{font-size:14px;color:var(--muted)}
+.process{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);padding:25px;border-radius:16px}
+.step-num{font-size:12px;font-weight:850;color:var(--blue);letter-spacing:1px}
+.step h3{font-size:17px;color:var(--navy);margin:8px 0}
+.step p{font-size:14px;color:var(--muted)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price-card{position:relative;border:1px solid var(--line);border-radius:20px;padding:31px 27px;background:#fff;box-shadow:0 10px 35px rgba(24,40,77,.045)}
+.price-card.popular{border:2px solid var(--blue);box-shadow:0 18px 45px rgba(71,120,245,.13)}
+.popular-label{display:inline-block;background:#edf2ff;color:var(--blue2);font-size:10px;font-weight:900;letter-spacing:1px;border-radius:99px;padding:6px 10px;margin-bottom:15px}
+.plan{font-size:19px;font-weight:800;color:var(--navy)}
+.price{font-size:37px;font-weight:900;letter-spacing:-1.5px;color:var(--navy);margin:10px 0 2px}
+.price small{font-size:13px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.plan-desc{font-size:13px;color:var(--muted);min-height:42px}
+.features{list-style:none;margin:22px 0 26px}
+.features li{font-size:13px;color:#4f5b73;padding:8px 0;border-bottom:1px solid #f0f2f7}
+.features li:before{content:"✓";color:#1dbb83;font-weight:900;margin-right:10px}
+.btn-dark{background:var(--navy);color:#fff;width:100%;padding:13px 18px;font-size:13px}
+.price-note{text-align:center;color:var(--muted);font-size:12px;margin-top:24px}
+.payment{background:var(--paper)}
+.payment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.payment-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px 17px;text-align:center}
+.payment-card .icon{margin:0 auto 12px;width:46px;height:46px}
+.payment-card h3{font-size:14px;color:var(--navy);margin-bottom:5px}
+.payment-card p{font-size:12px;color:var(--muted)}
+.contact-wrap{background:linear-gradient(125deg,#101a35,#244c91);border-radius:24px;padding:54px 25px;text-align:center;color:white}
+.contact-wrap h2{color:#fff;margin-top:0}
+.contact-wrap p{color:#d2dcf0;max-width:590px;margin:0 auto 25px;font-size:15px}
+.contact-meta{margin-top:18px;color:#d2dcf0;font-size:13px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+footer a{color:var(--blue);font-weight:700}
+@media(max-width:800px){.nav-links{gap:15px}.services-grid,.pricing-grid{grid-template-columns:1fr 1fr}.payment-grid{grid-template-columns:1fr 1fr}.hero{padding:78px 0}}
+@media(max-width:620px){.nav{height:67px}.menu-toggle{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:67px;left:0;right:0;background:#fff;padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.services-grid,.pricing-grid,.steps{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.hero p{font-size:15px}.trust-row{gap:13px}.price-card{padding:27px 23px}section{padding:66px 0}.contact-wrap{padding:42px 20px}}
+
+/* Refined responsive layout */
+:root{--shadow-soft:0 18px 55px rgba(16,26,53,.09)}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:100;background:#fff;color:var(--navy);padding:10px 14px;border-radius:10px;font-weight:700}
+.skip-link:focus{top:12px}
+.container{width:min(1160px,calc(100% - 48px))}
+.nav{min-height:74px}
+.brand{white-space:nowrap}
+.nav-links{gap:clamp(14px,2.2vw,28px)}
+.hero{padding:clamp(66px,8vw,104px) 0;isolation:isolate}
+.hero .container{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:center;gap:clamp(30px,5vw,72px)}
+.hero-content{max-width:690px}
+.hero h1{font-size:clamp(40px,5.3vw,64px);letter-spacing:-2px}
+.hero p{max-width:590px;line-height:1.8}
+.hero-visual{position:relative;z-index:1;width:100%;max-width:460px;justify-self:end;padding:22px;border:1px solid rgba(255,255,255,.19);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.07));box-shadow:0 28px 75px rgba(0,0,0,.2);backdrop-filter:blur(12px)}
+.visual-top{display:flex;align-items:center;gap:6px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.16)}
+.visual-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55)}
+.visual-title{margin-left:auto;font-size:9px;letter-spacing:1.4px;color:#cbd8f4;font-weight:800}
+.visual-label{font-size:19px;font-weight:800;margin:22px 0 17px;color:#fff}
+.visual-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.visual-metrics>div{padding:14px 12px;border-radius:13px;background:rgba(7,17,43,.25);min-width:0}
+.visual-metrics small{display:block;color:#b9c9e8;font-size:9px;letter-spacing:1px;font-weight:800;margin-bottom:7px}
+.visual-metrics strong{font-size:12px;color:#fff;display:block;line-height:1.4}
+.visual-metrics strong i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#43d6ad;margin-right:5px}
+.visual-chart{margin-top:12px;padding:16px 14px 12px;border-radius:14px;background:rgba(7,17,43,.28)}
+.chart-heading{display:flex;justify-content:space-between;color:#e8efff;font-size:11px;font-weight:700}
+.chart-heading span+span{color:#8faeff;letter-spacing:3px}
+.chart-bars{height:90px;display:flex;align-items:end;gap:7px;padding-top:13px}
+.chart-bars i{display:block;flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,#76a2ff,#43d6ad);height:var(--h,50%);opacity:.9}
+.chart-bars i:nth-child(1){height:28%}.chart-bars i:nth-child(2){height:42%}.chart-bars i:nth-child(3){height:35%}.chart-bars i:nth-child(4){height:56%}.chart-bars i:nth-child(5){height:48%}.chart-bars i:nth-child(6){height:68%}.chart-bars i:nth-child(7){height:58%}.chart-bars i:nth-child(8){height:76%}.chart-bars i:nth-child(9){height:65%}.chart-bars i:nth-child(10){height:88%}.chart-bars i:nth-child(11){height:78%}.chart-bars i:nth-child(12){height:100%}
+.visual-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:15px;color:#d0dcf4;font-size:10px;font-weight:650}
+section{scroll-margin-top:84px}
+.section-head{margin-bottom:38px}
+.services-grid,.steps,.pricing-grid{gap:22px}
+.service-card,.step,.price-card,.payment-card{box-shadow:var(--shadow-soft)}
+.service-card{padding:30px;min-height:220px}
+.service-card p,.step p{line-height:1.75}
+.price-card{display:flex;flex-direction:column}
+.price-card .features{flex:1}
+.price-card.popular{transform:translateY(-5px)}
+.payment-card{min-height:165px}
+.contact-wrap{box-shadow:0 22px 60px rgba(16,26,53,.16)}
+footer{line-height:1.8}
+@media(max-width:900px){
+ .hero .container{grid-template-columns:1fr;gap:38px}
+ .hero-content{max-width:760px}
+ .hero-visual{justify-self:start;max-width:560px}
+ .nav-links{gap:14px}
+ .nav-cta{padding:10px 14px}
+}
+@media(max-width:680px){
+ .container{width:min(100% - 34px,560px)}
+ .nav{height:66px;min-height:66px}
+ .nav-links{top:66px}
+ .hero{padding:58px 0 62px}
+ .hero .container{gap:30px}
+ .hero h1{font-size:clamp(38px,10vw,51px);line-height:1.08;letter-spacing:-1.7px;margin:20px 0 17px}
+ .hero p{font-size:15px;line-height:1.75;margin-bottom:24px}
+ .actions{display:grid;grid-template-columns:1fr;max-width:340px}
+ .btn{min-height:48px}
+ .trust-row{margin-top:28px;display:grid;gap:10px}
+ .hero-visual{padding:17px;border-radius:19px}
+ .visual-label{font-size:17px;margin:18px 0 14px}
+ .visual-metrics{grid-template-columns:1fr 1fr}
+ .visual-metrics>div{padding:12px 10px}
+ .visual-metrics strong{font-size:11px}
+ .chart-bars{height:74px;gap:5px}
+ section{padding:60px 0}
+ .section-head{margin-bottom:30px}
+ .services-grid,.pricing-grid,.steps,.payment-grid{grid-template-columns:1fr}
+ .service-card{min-height:0;padding:25px}
+ .price-card{padding:26px 23px}
+ .price-card.popular{transform:none}
+ .payment-card{min-height:0;padding:20px}
+ .contact-wrap{padding:36px 20px;border-radius:20px}
+ .contact-wrap p{font-size:14px}
+ .footer-inner{flex-direction:column;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{transition:none!important;animation:none!important}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home">Maya <span>&</span> Hasan<span>.</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#process">How It Works</a><a href="#pricing">Pricing</a><a href="#payment">Payment</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#services">View Services ↓</a>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="dot"></span> Malaysia-based · Serving worldwide</div>
+        <h1>Turn attention into <em>real business growth.</em></h1>
+        <p>Strategic Facebook and Instagram advertising for businesses ready to reach the right people, generate leads and grow with confidence.</p>
+        <div class="actions">
+          <a class="btn btn-green" href="#services">Explore Our Services ↓</a>
+          <a class="btn btn-light" href="#pricing">Explore Packages ↓</a>
+        </div>
+        <div class="trust-row"><span><b>✓</b> Clear monthly pricing</span><span><b>✓</b> Campaign optimization</span><span><b>✓</b> International payments</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Illustration of an advertising campaign dashboard">
+        <div class="visual-top"><span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-title">CAMPAIGN OVERVIEW</span></div>
+        <div class="visual-label">Your growth, with a clear plan</div>
+        <div class="visual-metrics"><div><small>CAMPAIGN STATUS</small><strong><i></i> Ready to grow</strong></div><div><small>CHANNELS</small><strong>Facebook + Instagram</strong></div></div>
+        <div class="visual-chart"><div class="chart-heading"><span>Performance snapshot</span><span>● ● ●</span></div><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="visual-foot"><span>◎ Audience targeting</span><span>↗ Ongoing optimization</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><div class="kicker">What we do</div><h2>Advertising that works harder for your business</h2><p>Focused digital advertising support to help your brand connect with potential customers.</p></div>
+      <div class="services-grid">
+        <article class="service-card"><div class="icon">📘</div><h3>Facebook Ads</h3><p>Reach relevant audiences with carefully planned campaigns designed to increase awareness, enquiries and sales opportunities.</p></article>
+        <article class="service-card"><div class="icon">📸</div><h3>Instagram Ads</h3><p>Promote your brand through engaging image and video campaigns that help you connect with the right audience.</p></article>
+        <article class="service-card"><div class="icon">📈</div><h3>Ad Management</h3><p>Campaign setup, audience targeting, ongoing optimization and performance tracking to keep your advertising organized.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head"><div class="kicker">A simple process</div><h2>From first conversation to campaign launch</h2><p>A clear process helps us understand your goals and recommend the right level of support.</p></div>
+      <div class="steps">
+        <article class="step"><div class="step-num">STEP 01</div><h3>Tell us about your business</h3><p>Share your product or service, target audience and what you want your ads to achieve.</p></article>
+        <article class="step"><div class="step-num">STEP 02</div><h3>Choose your package</h3><p>Review the available plans and discuss which service level fits your needs and budget.</p></article>
+        <article class="step"><div class="step-num">STEP 03</div><h3>Plan and manage campaigns</h3><p>Once details are agreed, we prepare and manage the advertising work covered by your plan.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Straightforward pricing</div><h2>Choose the support you need</h2><p>All service fees are shown in Malaysian Ringgit (MYR). Your Meta advertising budget is separate.</p></div>
+      <div class="pricing-grid">
+        <article class="price-card"><div class="plan">Basic</div><div class="price">RM 800 <small>/ month</small></div><p class="plan-desc">A focused starting point for one platform.</p><ul class="features"><li>1 platform: Facebook or Instagram</li><li>Ad setup and management</li><li>Basic audience targeting</li><li>Monthly performance summary</li><li>Minimum ad spend: RM 1,500</li></ul><a class="btn btn-dark" href="#contact">Ask about Basic</a></article>
+        <article class="price-card popular"><div class="popular-label">POPULAR CHOICE</div><div class="plan">Standard</div><div class="price">RM 1,500 <small>/ month</small></div><p class="plan-desc">More coverage across Facebook and Instagram.</p><ul class="features"><li>Facebook and Instagram management</li><li>Advanced audience targeting</li><li>Monthly performance report</li><li>A/B testing included</li><li>Minimum ad spend: RM 3,000</li></ul><a class="btn btn-dark" href="#contact">Ask about Standard</a></article>
+        <article class="price-card"><div class="plan">Premium</div><div class="price">RM 2,500+ <small>/ month</small></div><p class="plan-desc">Expanded support for more involved campaigns.</p><ul class="features"><li>Full campaign management</li><li>Creative design included</li><li>Weekly optimization</li><li>Dedicated account manager</li><li>Minimum ad spend: RM 5,000+</li></ul><a class="btn btn-dark" href="#contact">Ask about Premium</a></article>
+      </div>
+      <p class="price-note">* Package prices are service fees only. Meta advertising spend is paid separately by the client. All prices are billed in MYR.</p>
+    </div>
+  </section>
+
+  <section class="payment" id="payment">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Convenient payments</div><h2>Payment options</h2><p>Payment options for clients in Malaysia and around the world.</p></div>
+      <div class="payment-grid">
+        <article class="payment-card"><div class="icon">🏦</div><h3>Bank Transfer</h3><p>Maybank, CIMB and RHB. Details shared on invoice.</p></article>
+        <article class="payment-card"><div class="icon">🌍</div><h3>Wise</h3><p>For international clients. Pay in your local currency; receive in MYR.</p></article>
+        <article class="payment-card"><div class="icon">💳</div><h3>PayPal</h3><p>Available for clients outside Malaysia. 4% processing fee applies.</p></article>
+        <article class="payment-card"><div class="icon">📱</div><h3>Touch ’n Go / DuitNow</h3><p>Convenient local transfers within Malaysia.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="kicker" style="color:#a9c1ff">Let’s work together</div>
+        <h2>Ready to grow your business?</h2>
+        <p>Tell us what you’re building and what you want your advertising to achieve. Contact us on WhatsApp to discuss the next step.</p>
+        <a class="btn btn-green" href="https://wa.me/601168646416?text=Hi%2C%20I%27d%20like%20to%20discuss%20Facebook%20and%20Instagram%20advertising." target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+        <div class="contact-meta">WhatsApp: +60 11-6864 6416 · Based in Malaysia · Serving worldwide</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container footer-inner"><div><strong style="color:var(--navy)">Maya & Hasan</strong> · Facebook & Instagram Ads Agency</div><div>© <span id="year"></span> Maya & Hasan. All rights reserved.</div><div><a href="https://wa.me/601168646416" target="_blank" rel="noopener">WhatsApp us ↗</a></div></div></footer>
+<script>
+function toggleMenu(){
+  const nav=document.getElementById('navLinks');
+  const button=document.querySelector('.menu-toggle');
+  const open=nav.classList.toggle('open');
+  button.setAttribute('aria-expanded',String(open));
+}
+document.querySelectorAll('#navLinks a').forEach(link=>link.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+  document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
